@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ishkur-web/static/css/main.e5cf6e85.css",
-    "main.js": "/ishkur-web/static/js/main.90aeb287.js",
-    "static/js/787.c5e44464.chunk.js": "/ishkur-web/static/js/787.c5e44464.chunk.js",
-    "static/media/logo.png": "/ishkur-web/static/media/logo.6b96ed5a2860b1549ce2.png",
-    "index.html": "/ishkur-web/index.html",
-    "main.e5cf6e85.css.map": "/ishkur-web/static/css/main.e5cf6e85.css.map",
-    "main.90aeb287.js.map": "/ishkur-web/static/js/main.90aeb287.js.map",
-    "787.c5e44464.chunk.js.map": "/ishkur-web/static/js/787.c5e44464.chunk.js.map"
+    "main.css": "/static/css/main.30e6fff0.css",
+    "main.js": "/static/js/main.7f5d2200.js",
+    "static/js/787.c5e44464.chunk.js": "/static/js/787.c5e44464.chunk.js",
+    "static/media/logo.png": "/static/media/logo.6b96ed5a2860b1549ce2.png",
+    "index.html": "/index.html",
+    "main.30e6fff0.css.map": "/static/css/main.30e6fff0.css.map",
+    "main.7f5d2200.js.map": "/static/js/main.7f5d2200.js.map",
+    "787.c5e44464.chunk.js.map": "/static/js/787.c5e44464.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5cf6e85.css",
-    "static/js/main.90aeb287.js"
+    "static/css/main.30e6fff0.css",
+    "static/js/main.7f5d2200.js"
   ]
 }
