@@ -1,0 +1,363 @@
+*************************************************************************
+*************************************************************************
+****** FLASH FILE PARSE LOG ****** epichouse.swf
+*************************************************************************
+*************************************************************************
+	RECT(min,max) x=(0.0,640.0) y=(0.0,480.0)
+	version=6, type=FWS, framerate=24, framenum=22
+
+************************************************** BackGroundColor
+	RGB=(0,0,0)
+************************************************** Protect
+	the SWF file cannot be imported
+************************************************** DoActionTag
+000000 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ActionConstantPool
+		count= 9
+		no.= 000, name: percent
+		no.= 001, name: getBytesLoaded
+		no.= 002, name: getBytesTotal
+		no.= 003, name: Math
+		no.= 004, name: floor
+		no.= 005, name: loader
+		no.= 006, name: totalpercent
+		no.= 007, name: text
+		no.= 008, name: gotoAndStop
+************************************************** FrameLabel
+	label: start
+************************************************** DefineFont2
+	LanguageCode: Latin
+	FontID= 7, name: SF Atarian System
+	CodeTableNum= 48
+************************************************** DefineText
+	CharacterID= 8
+	RECT(min,max) x=(0.5,134.7) y=(-1.1,9.8)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(255,204,0)
+		==================================== GLYPHENTRY
+		GlyphCount= 31
+		Strings: listen to this genre right now!
+************************************************** DefineFont2
+	LanguageCode: Latin
+	FontID= 9, name: Arial
+	CodeTableNum= 2
+************************************************** DefineText
+	CharacterID= 10
+	RECT(min,max) x=(0.6,115.4) y=(0.9,14.5)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(255,204,0)
+		==================================== GLYPHENTRY
+		GlyphCount= 16
+		Strings: streaming radio 
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 9
+		==================================== GLYPHENTRY
+		GlyphCount= 2
+		Strings: @ 
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+		==================================== GLYPHENTRY
+		GlyphCount= 5
+		Strings: DI.FM
+************************************************** DefineButton2
+	ButtonId= 13
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+000001 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ActionGetURL
+		URL   : http://www.di.fm
+		Target: _blank
+************************************************** DoActionTag
+************************************************** DefineEditText
+	CharacterID= 17
+	RECT(min,max) x=(-2.0,129.5) y=(-2.0,94.6)
+	FontID= 9 FontHeight= 8.0
+	RGBA=(255,255,255,255)
+	VariableName: text
+************************************************** DefineButton2
+	ButtonId= 22
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineButton2
+	ButtonId= 26
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DoActionTag
+************************************************** DoActionTag
+000000 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ActionConstantPool
+		count= 7
+		no.= 000, name: currentscroll
+		no.= 001, name: ../:text
+		no.= 002, name: scroll
+		no.= 003, name: max
+		no.= 004, name: maxscroll
+		no.= 005, name: slider
+		no.= 006, name: ../:height
+************************************************** DoActionTag
+************************************************** DoActionTag
+************************************************** DoActionTag
+000000 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ActionConstantPool
+		count= 7
+		no.= 000, name: currentscroll
+		no.= 001, name: ../:text
+		no.= 002, name: scroll
+		no.= 003, name: max
+		no.= 004, name: maxscroll
+		no.= 005, name: slider
+		no.= 006, name: ../:height
+************************************************** DoActionTag
+************************************************** DoActionTag
+000022 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ActionGetURL2
+		non, Target is a path to a sprite, Load variables
+************************************************** PlaceObject2
+	PlaceFlagName: down
+************************************************** PlaceObject2
+	PlaceFlagName: up
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: load
+************************************************** DoActionTag
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: end
+************************************************** DefineText
+	CharacterID= 30
+	RECT(min,max) x=(0.9,96.1) y=(-1.9,16.5)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,255,153)
+		==================================== GLYPHENTRY
+		GlyphCount= 10
+		Strings: EPIC HOUSE
+************************************************** DefineText
+	CharacterID= 31
+	RECT(min,max) x=(-0.3,81.5) y=(-1.2,10.5)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,204,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 15
+		Strings: aka 'DANCE MIX'
+************************************************** DefineText
+	CharacterID= 33
+	RECT(min,max) x=(1.1,97.4) y=(-2.1,19.5)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 7
+		Strings: LOADING
+************************************************** DefineEditText
+	CharacterID= 39
+	RECT(min,max) x=(-2.0,20.8) y=(-2.0,9.9)
+	FontID= 7 FontHeight= 9.0
+	RGBA=(255,255,255,255)
+	VariableName: 
+	InitialText: 0
+************************************************** DefineText
+	CharacterID= 40
+	RECT(min,max) x=(0.4,11.7) y=(-0.7,6.6)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 1
+		Strings: %
+************************************************** DefineEditText
+	CharacterID= 41
+	RECT(min,max) x=(-2.0,20.8) y=(-2.0,9.9)
+	FontID= 7 FontHeight= 9.0
+	RGBA=(255,255,255,255)
+	VariableName: 
+	InitialText: 0
+************************************************** DoActionTag
+************************************************** PlaceObject2
+	PlaceFlagName: totalpercent
+************************************************** PlaceObject2
+	PlaceFlagName: totalpercent
+************************************************** PlaceObject2
+	PlaceFlagName: loader
+************************************************** DoActionTag
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: one
+************************************************** DefineText
+	CharacterID= 44
+	RECT(min,max) x=(-0.3,234.3) y=(-1.2,25.9)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,204,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 21
+		Strings: artist: MIKE OLDFIELD
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+		==================================== GLYPHENTRY
+		GlyphCount= 42
+		Strings: track: MOONLIGHT SHADOW (STUPID DANCE MIX)
+************************************************** DefineFont2
+	type: Bold
+	LanguageCode: Latin
+	FontID= 46, name: SF Atarian System
+	CodeTableNum= 5
+************************************************** DefineText
+	CharacterID= 47
+	RECT(min,max) x=(0.6,14.2) y=(-1.2,12.3)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 46
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 1
+		Strings: 2
+************************************************** DefineButton2
+	ButtonId= 49
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineText
+	CharacterID= 50
+	RECT(min,max) x=(0.6,14.2) y=(-1.2,12.3)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 46
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 1
+		Strings: 3
+************************************************** DefineButton2
+	ButtonId= 51
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineText
+	CharacterID= 53
+	RECT(min,max) x=(0.6,10.0) y=(-1.2,12.3)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 46
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 1
+		Strings: 1
+************************************************** DefineText
+	CharacterID= 54
+	RECT(min,max) x=(0.6,14.5) y=(-1.2,12.3)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 46
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 1
+		Strings: 4
+************************************************** DefineButton2
+	ButtonId= 55
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineText
+	CharacterID= 56
+	RECT(min,max) x=(0.6,14.2) y=(-1.2,12.3)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 46
+	RGB=(255,255,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 1
+		Strings: 5
+************************************************** DefineButton2
+	ButtonId= 57
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineButton2
+	ButtonId= 62
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineSound
+	sndID= 63
+	format= 2(MP3), samplecnt= 1206272
+	ch: stereo, br: 16[bits], sf: 44100[Hz]
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: two
+************************************************** DefineText
+	CharacterID= 64
+	RECT(min,max) x=(-0.3,192.7) y=(-1.2,25.9)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,204,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 12
+		Strings: artist: A-HA
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+		==================================== GLYPHENTRY
+		GlyphCount= 36
+		Strings: track: TAKE ON ME (STUPID DANCE MIX)
+************************************************** DefineButton2
+	ButtonId= 65
+	TrackAsMenu: normal button
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BUTTONCONDACTION
+************************************************** DefineSound
+	sndID= 66
+	format= 2(MP3), samplecnt= 528383
+	ch: stereo, br: 16[bits], sf: 44100[Hz]
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: three
+************************************************** DefineText
+	CharacterID= 67
+	RECT(min,max) x=(-0.3,173.2) y=(-1.2,25.9)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,204,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 19
+		Strings: artist: BRYAN ADAMS
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+		==================================== GLYPHENTRY
+		GlyphCount= 32
+		Strings: track: HEAVEN (STUPID DANCE MIX)
+************************************************** DefineSound
+	sndID= 68
+	format= 2(MP3), samplecnt= 1228800
+	ch: stereo, br: 16[bits], sf: 44100[Hz]
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: four
+************************************************** DefineText
+	CharacterID= 69
+	RECT(min,max) x=(-0.3,222.2) y=(-1.2,25.9)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,204,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 18
+		Strings: artist: DON HENLEY
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+		==================================== GLYPHENTRY
+		GlyphCount= 40
+		Strings: track: BOYS OF SUMMER (STUPID DANCE MIX)
+************************************************** DefineSound
+	sndID= 70
+	format= 2(MP3), samplecnt= 583679
+	ch: stereo, br: 16[bits], sf: 44100[Hz]
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: five
+************************************************** DefineText
+	CharacterID= 71
+	RECT(min,max) x=(-0.3,220.5) y=(-1.2,25.9)
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+	FontID= 7
+	RGB=(0,204,255)
+		==================================== GLYPHENTRY
+		GlyphCount= 19
+		Strings: artist: DURAN DURAN
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TEXTRECORD
+		==================================== GLYPHENTRY
+		GlyphCount= 40
+		Strings: track: ORDINARY WORLD (STUPID DANCE MIX)
+************************************************** DefineSound
+	sndID= 72
+	format= 2(MP3), samplecnt= 595456
+	ch: stereo, br: 16[bits], sf: 44100[Hz]
+************************************************** DoActionTag
+************************************************** FrameLabel
+	label: quiet
+************************************************** FrameLabel
+	label: end
+************************************************** EndFrame
+
