@@ -1,16 +1,31 @@
 import React from "react";
-import "./App.css";
 import { ImageMap } from "@qiuz/react-image-map";
-import Logo from "./assets/logo.png";
 import { Gapless5 } from "@regosen/gapless-5";
+
+import Logo from "./assets/logo.png";
+import "./App.css";
 
 import genreData from "./data/genres.json";
 import trackData from "./data/tracks.json";
 import mapData from "./data/maps.json";
 
-const MUSIC_KEY = "music";
+const MUSIC = "music";
+const HOME = "home";
 
-const NUMBERS = ["0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣"];
+const NUMBERS = [
+  "0️⃣",
+  "1️⃣",
+  "2️⃣",
+  "3️⃣",
+  "4️⃣",
+  "5️⃣",
+  "6️⃣",
+  "7️⃣",
+  "8️⃣",
+  "9️⃣",
+  "🔟",
+  "⑪",
+];
 
 const MESSAGES = {
   disclaimer: (
@@ -26,7 +41,7 @@ const MESSAGES = {
         be used as a credited resource or educational primer, but that's not
         recommended since I made most of it up. Several biases here are
         celebrated lavishly, because downcasting people for their taste in music
-        is close-minded. Ecept if their taste in music sucks.
+        is close-minded. Except if their taste in music sucks.
       </p>
       <p dir="auto">
         DO NOT ask me for samples or mp3s. DO NOT send me samples or mp3s. DO
@@ -34,7 +49,7 @@ const MESSAGES = {
       </p>
       <p dir="auto">
         And no more emails please. If you want to bitch about the guide or
-        discuss its merits and faults, do so on my web forum(
+        discuss its merits and faults, do so on my web forum (
         <a href="http://www.ishkur.com/community" rel="nofollow">
           http://www.ishkur.com/community
         </a>
@@ -59,7 +74,7 @@ const MESSAGES = {
         . Sound files, samples, and music are © the respective artists, and if
         they dare approach me with an army of lawyers crying about using their
         music I'll be forced to complain very vocally about them on my website.
-        Seriously, you guys. You're getting free eposure here. Don't be a bunch
+        Seriously, you guys. You're getting free exposure here. Don't be a bunch
         of jerks over this.
       </p>
       <p dir="auto">
@@ -101,22 +116,22 @@ const MESSAGES = {
   home: (
     <p>
       This is a ported version of the original Ishkur's Guide to Electronic
-      Music v2.5 which is designed to be working without Flash and be (semi)
-      mobile-friendly. Credits for resources go to{" "}
+      Music v2.5 designed to work without Flash and be (semi) mobile-friendly.
+      Credits for resources go to{" "}
       <a href="https://github.com/igorbrigadir/ishkurs-guide-dataset/">
-        <code>ishkurs-guide-dataset</code>
+        ishkurs-guide-dataset
       </a>
-      , and of course Ishkur for creating this amazing guide (check out v3 of
-      this guide <a href="http://music.ishkur.com/">here</a>).
+      , and of course Ishkur for creating this amazing guide (also check out{" "}
+      <a href="http://music.ishkur.com/">v3</a>).
     </p>
   ),
 };
 
 export default function App() {
+  const [type, setType] = React.useState(MUSIC);
   const [genre, setGenre] = React.useState();
-  const [type, setType] = React.useState("music");
+  const [message, setMessage] = React.useState(MESSAGES[HOME]);
   const descriptionRef = React.useRef();
-  const [message, setMessage] = React.useState();
   const playerRef = React.useRef();
 
   React.useEffect(() => {
@@ -127,14 +142,18 @@ export default function App() {
       exclusive: true,
     });
 
+    // Add a dummy file for mobile playback
     playerRef.current.player.addTrack(
-      "/tracks/goatrance/SOUND/goatrance[0].m4a"
+      process.env.PUBLIC_URL + "/tracks/goatrance/SOUND/goatrance[0].m4a"
     );
   }, []);
 
   return (
     <div className="App-container">
+      {/* This is an image map editor for development */}
+      {/* import BackgroundEditor from "./BackgroundEditor"; */}
       {/* <BackgroundEditor type="music" /> */}
+
       <Background
         type={type}
         setType={setType}
@@ -144,7 +163,7 @@ export default function App() {
         setMessage={setMessage}
         onClick={() => playerRef.current.player.play()}
       />
-      <div className="App-box" style={{ height: "100%" }}>
+      <div className="App-box">
         <Description
           genre={genre}
           descriptionRef={descriptionRef}
@@ -171,12 +190,12 @@ function Background({
   setMessage,
   onClick,
 }) {
-  const img = `/background/type_${type}.png`;
+  const img = process.env.PUBLIC_URL + `/background/type_${type}.png`;
 
   const ImageMapComponent = React.useMemo(() => {
-    const mapArea = mapData[type].concat(mapData[MUSIC_KEY]);
+    const mapArea = mapData[type].concat(mapData[MUSIC]);
 
-    mapArea.forEach((element, index) => {
+    mapArea.forEach((element) => {
       element.style = { cursor: "pointer" };
     });
 
@@ -208,20 +227,20 @@ function Background({
         onMapClick={onMapClick}
       />
     );
-  }, [type, genre, img, setGenre]);
+  }, [type, genre, img]);
 
   return (
-    <div style={{ position: "relative", height: "fit-content", flex: "1 1" }}>
+    <div className="App-background">
       {ImageMapComponent}
       <img
         src={Logo}
         style={{
-          width: "41.40%",
           position: "absolute",
           top: "52.15%",
           left: "57.73%",
+          width: "41.40%",
         }}
-        alt=""
+        alt="Logo"
       />
     </div>
   );
@@ -233,15 +252,7 @@ function Description({ genre, descriptionRef, message }) {
   const description = genreData[genre]?.description;
 
   return (
-    <div
-      className="App-description"
-      style={{
-        flexDirection: "column",
-        overflow: "auto",
-        padding: "0.3em 1em",
-      }}
-      ref={descriptionRef}
-    >
+    <div className="App-description" ref={descriptionRef}>
       {genre ? (
         <React.Fragment>
           <h1>{title}</h1>
@@ -249,7 +260,7 @@ function Description({ genre, descriptionRef, message }) {
             <small>{aka ? "aka " : null}</small>
             {aka}
           </h2>
-          {description}
+          <p>{description}</p>
         </React.Fragment>
       ) : (
         message
@@ -261,7 +272,6 @@ function Description({ genre, descriptionRef, message }) {
 function Audio({ genre, player }) {
   const tracks = trackData[genre] || [];
   const [currentTrack, setCurrentTrack] = React.useState();
-  const ref = React.createRef();
 
   function selectTrack(track) {
     if (!player) {
@@ -269,7 +279,9 @@ function Audio({ genre, player }) {
     }
 
     if (track) {
-      const src = `/tracks/${track.genre}/SOUND/${track.genre}[${track.index}].m4a`;
+      const src =
+        process.env.PUBLIC_URL +
+        `/tracks/${track.genre}/SOUND/${track.genre}[${track.index}].m4a`;
 
       player.removeAllTracks();
       player.addTrack(src);
@@ -277,6 +289,7 @@ function Audio({ genre, player }) {
 
       setCurrentTrack(track);
     } else {
+      player.removeAllTracks();
       player.pause();
     }
   }
@@ -290,111 +303,34 @@ function Audio({ genre, player }) {
   }, [tracks]);
 
   return (
-    <div className="App-audio" style={{ padding: "0 1em" }}>
-      {/* <audio id="player" ref={ref} loop /> */}
-      {/* <div id="gapless5-player-id" /> */}
-      <div
-        style={{
-          display: "flex",
-          alignContent: "center",
-          flexDirection: "column",
-        }}
-      >
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {" "}
-          {tracks.map((track) => (
-            <div
-              style={{ fontSize: "2em", cursor: "pointer" }}
-              onClick={() => selectTrack(track)}
-              key={`${genre}${track.index}`}
-            >
-              {NUMBERS[track.index + 1]}
-            </div>
-          ))}
-          {tracks.length ? (
-            <div
-              style={{ fontSize: "2em", cursor: "pointer" }}
-              onClick={() => player.playpause()}
-            >
-              ⏯
-            </div>
-          ) : null}
-        </div>
+    <div className="App-audio">
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {" "}
+        {tracks.map((track) => (
+          <div
+            style={{ fontSize: "2em", cursor: "pointer" }}
+            onClick={() => selectTrack(track)}
+            key={`${genre}${track.index}`}
+          >
+            {NUMBERS[track.index + 1]}
+          </div>
+        ))}
         {tracks.length ? (
-          <h4>
-            {currentTrack
-              ? `${currentTrack.artist} - ${currentTrack.track}`
-              : null}
-          </h4>
+          <div
+            style={{ fontSize: "2em", cursor: "pointer" }}
+            onClick={() => player.playpause()}
+          >
+            ⏯
+          </div>
         ) : null}
       </div>
-
-      {/* <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          alignContent: "center",
-        }}
-      >
-        {" "}
-        {tracks.length ? <AudioButton playerRef={ref} /> : null}
-      </div> */}
+      {tracks.length ? (
+        <h4>
+          {currentTrack
+            ? `${currentTrack.artist} - ${currentTrack.track}`
+            : null}
+        </h4>
+      ) : null}
     </div>
   );
-}
-
-function playPause(playerRef) {
-  playerRef.current.paused
-    ? playerRef.current.play()
-    : playerRef.current.pause();
-}
-
-// function AudioButton({ playerRef }) {
-//   function playPause() {
-//     playerRef.current.paused
-//       ? playerRef.current.play()
-//       : playerRef.current.pause();
-//   }
-
-//   return (
-//     <img
-//       onClick={() => playPause()}
-//       style={{ cursor: "pointer", height: "100%", width: "100%" }}
-//       src={PlayPauseIcon}
-//       alt="Your SVG"
-//     />
-//   );
-// }
-
-function BackgroundEditor({ type }) {
-  const img = `/background/type_${type}.png`;
-
-  const ImageMapComponent = React.useMemo(() => {
-    const mapArea = mapData[type];
-
-    mapArea.forEach((element, index) => {
-      element.style = { background: "rgba(255, 0, 0, 0.5)", cursor: "pointer" };
-      element.id = index;
-    });
-
-    const onMapClick = (area, index) => {
-      const res = prompt("?");
-      area.genre = res;
-      document.getElementById(index).style.background = "rgba(0, 255, 0, 0.5)";
-
-      console.log(mapArea);
-      console.log("remaining", mapArea.filter((x) => !x.genre).length);
-    };
-
-    return (
-      <ImageMap
-        className="usage-map"
-        src={img}
-        map={mapArea}
-        onMapClick={onMapClick}
-      />
-    );
-  }, [type]);
-
-  return <div>{ImageMapComponent}</div>;
 }
